@@ -4,7 +4,10 @@ git status;
 
 git add .;
 
-git commit -m "Whats banner";
+git commit -m "Icone na guia";
 
 git push -u origin main;
+
+echo ""
+echo "Enviado!"
 
