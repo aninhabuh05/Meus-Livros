@@ -4,7 +4,7 @@ git status;
 
 git add .;
 
-git commit -m "Icone na guia";
+git commit -m "Novos Livros";
 
 git push -u origin main;
 
