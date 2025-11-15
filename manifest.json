@@ -1,0 +1,16 @@
+{
+  "name": "Meus livros",
+  "short_name": "Livros",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3e0dc",
+  "theme_color": "#f3e0dc",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "./icones/rosa.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

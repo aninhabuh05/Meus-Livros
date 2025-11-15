@@ -1,7 +1,9 @@
-git status
+clear;
 
-git add .
+git status;
 
-git commit -m "primeiro commit"
+git add .;
 
-git push -u origin main
+git commit -m "primeiro commit";
+
+git push -u origin main;
