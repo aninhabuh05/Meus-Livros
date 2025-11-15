@@ -4,6 +4,7 @@ git status;
 
 git add .;
 
-git commit -m "primeiro commit";
+git commit -m "Whats banner";
 
 git push -u origin main;
+
