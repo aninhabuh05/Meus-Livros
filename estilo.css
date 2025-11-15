@@ -1,0 +1,142 @@
+:root {
+    --text-color: #444;
+    --border-color: #e0e0e0;
+    --background-color: #fafafa;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-script: 'Playfair Display', serif;
+    --soft-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --pink-glow: rgba(255, 29, 180, 0.897);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-serif);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    background-image: url('fotos/fundo.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.title-container {
+    text-align: center;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+.main-title {
+    font-family: var(--font-script);
+    font-size: 6em;
+    font-style: italic;
+    color: #222;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideIn 1.5s forwards;
+}
+
+.card {
+    width: 100%;
+    max-width: 1000px; /* Aumenta a largura máxima da caixa "Sobre" e "Livros" */
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid var(--border-color);
+    text-align: center;
+    border-radius: 12px;
+    padding: 60px;
+    box-shadow: var(--soft-shadow);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* O hover da caixa "Sobre" já não se move, mas as "Livros" ainda sim */
+.books-section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 15px 5px var(--pink-glow), 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    font-family: var(--font-serif);
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.card-link-box {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.footer {
+    padding: 10px 50px;
+    text-align: center;
+    margin-top: auto;
+    background-color: transparent;
+}
+
+.logo-footer {
+    font-size: 1.2em;
+    color: #888;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 40px 15px;
+    }
+    .main-title {
+        font-size: 3.5em;
+        margin-bottom: 40px;
+    }
+    .card {
+        max-width: 90%; /* Ajusta a largura máxima para celular */
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    .card-title {
+        font-size: 1.8em;
+    }
+    .card-text {
+        font-size: 1em;
+    }
+    .footer {
+        padding: 30px 15px;
+    }
+}
+
+/* Animação para "Bem-vindos!" */
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
